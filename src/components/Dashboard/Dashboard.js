@@ -5,9 +5,8 @@ import PieChart from "../../Utlites/Charts/PieChart";
 import BarChart from "../../Utlites/Charts/BarChart";
 
 const Dashboard = () => {
-  // Sample student data
   const students = [
-    { name: 'John Doe', phone: '123-456-7890', address: '123 Main St', percentage: '85%', class: '10th', fees: '$500' },
+  { name: 'John Doe', phone: '123-456-7890', address: '123 Main St', percentage: '85%', class: '10th', fees: '$500' },
   { name: 'Jane Smith', phone: '987-654-3210', address: '456 Elm St', percentage: '90%', class: '11th', fees: '$600' },
   { name: 'Emily Johnson', phone: '555-123-4567', address: '789 Oak St', percentage: '75%', class: '10th', fees: '$550' },
   { name: 'Michael Brown', phone: '111-222-3333', address: '101 Pine St', percentage: '88%', class: '12th', fees: '$650' },

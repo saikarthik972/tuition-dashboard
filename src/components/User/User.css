@@ -1,0 +1,45 @@
+.user-page {
+  margin-top: 85rem;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+.to-do-list,
+.calendar,
+.financial-overview {
+  margin-bottom: 20px;
+}
+
+.to-do-list ul,
+.personal-goals ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.to-do-list li,
+.personal-goals li {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+
+.add-task,
+.add-goal,
+.edit-goal {
+  margin-top: 10px;
+}
+
+.add-task input,
+.add-goal input,
+.edit-goal input {
+  margin-right: 10px;
+  padding: 5px;
+}

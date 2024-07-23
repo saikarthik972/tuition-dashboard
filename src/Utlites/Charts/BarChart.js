@@ -25,7 +25,7 @@ const BarChart = ({ studentData }) => {
 
   const options = {
     responsive: true,
-    maintainAspectRatio: false, // Allows chart to scale with container
+    maintainAspectRatio: false, 
     plugins: {
       legend: {
         position: 'top',

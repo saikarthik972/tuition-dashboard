@@ -7,9 +7,7 @@ const LoginScreen = () => {
   const [isRightPanelActive, setRightPanelActive] = useState(false);
   const navigate = useNavigate();
 
-  const handleSignUpClick = () => {
-    setRightPanelActive(true);
-  };
+
 
   const handleSignInClick = () => {
     setRightPanelActive(false);
@@ -17,9 +15,8 @@ const LoginScreen = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Perform authentication (you can add your authentication logic here)
     localStorage.setItem('isAuthenticated', 'true');
-    navigate('/dashboard'); // Redirect to the dashboard on successful login
+    navigate('/dashboard'); 
   };
 
   return (

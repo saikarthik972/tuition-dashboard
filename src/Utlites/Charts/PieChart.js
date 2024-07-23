@@ -39,7 +39,7 @@ const PieChart = ({ studentData }) => {
 
   const options = {
     responsive: true,
-    maintainAspectRatio: false, // Allows chart to scale with container
+    maintainAspectRatio: false, 
   };
 
   return (

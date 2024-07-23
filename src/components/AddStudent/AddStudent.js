@@ -34,9 +34,8 @@ const AddStudent = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add student logic here (e.g., sending data to server)
     console.log(student);
-    navigate("/dashboard"); // Redirect to the dashboard after adding a student
+    navigate("/dashboard"); 
   };
 
   return (
