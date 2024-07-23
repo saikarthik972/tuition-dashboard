@@ -53,19 +53,19 @@ const Dashboard = () => {
       <div className="dashboard-stats">
         <div className="stat-box">
           <h3>714k</h3>
-          <p>Weekly Sales</p>
+          <p>Total Students</p>
         </div>
         <div className="stat-box">
-          <h3>1.35m</h3>
-          <p>New Users</p>
+          <h3>135</h3>
+          <p>Primay Students</p>
         </div>
         <div className="stat-box">
           <h3>1.72m</h3>
-          <p>Item Orders</p>
+          <p>High School Students</p>
         </div>
         <div className="stat-box">
           <h3>234</h3>
-          <p>Bug Reports</p>
+          <p>College Students</p>
         </div>
       </div>
       <div className="dashboard-charts">
