@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Dashboard.css";
-import PieChart from "../Charts/PieChart";
-import BarChart from "../Charts/BarChart";
+import PieChart from "../../Utlites/Charts/PieChart";
+import BarChart from "../../Utlites/Charts/BarChart";
 
 const Dashboard = () => {
   // Sample student data
