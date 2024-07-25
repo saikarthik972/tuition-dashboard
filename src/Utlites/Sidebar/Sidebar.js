@@ -11,8 +11,6 @@ const Sidebar = () => {
       <ul className="sidebar-menu">
         <li><Link to="/dashboard">Dashboard</Link></li>
         <li><Link to="/User">User</Link></li>
-        <li><Link to="student-details">Students Deatils</Link></li>
-        <li><Link to="/blog">Blog</Link></li>
         <li><Link to="/login">Logout</Link></li>
       </ul>
     </div>

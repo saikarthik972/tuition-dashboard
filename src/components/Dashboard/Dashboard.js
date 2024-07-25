@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate  } from "react-router-dom";
 import "./Dashboard.css";
 
 const Dashboard = () => {
@@ -68,6 +68,9 @@ const Dashboard = () => {
 
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredStudents, setFilteredStudents] = useState(students);
+  const [selectedStudents, setSelectedStudents] = useState([]);
+  
+  const navigate = useNavigate();
 
   const handleSearch = (event) => {
     const term = event.target.value.toLowerCase();
@@ -78,6 +81,27 @@ const Dashboard = () => {
         student.phone.includes(term)
     );
     setFilteredStudents(results);
+  };
+
+  const handleSelectStudent = (name) => {
+    setSelectedStudents((prevSelected) => {
+      if (prevSelected.includes(name)) {
+        return prevSelected.filter((studentName) => studentName !== name);
+      } else {
+        return [...prevSelected, name];
+      }
+    });
+  };
+
+  const handleDeleteSelected = () => {
+    setFilteredStudents((prevStudents) =>
+      prevStudents.filter((student) => !selectedStudents.includes(student.name))
+    );
+    setSelectedStudents([]);
+  };
+
+  const handleViewStudentDetail = (name) => {
+    navigate(`/student/${name}`);
   };
 
   return (
@@ -94,10 +118,14 @@ const Dashboard = () => {
           <Link to="/add-student">
             <button className="new-student-button">Add New Student</button>
           </Link>
+          <button onClick={handleDeleteSelected} className="delete-student-button">
+            Delete
+          </button>
         </div>
         <table>
           <thead>
             <tr>
+              <th>Select</th>
               <th>Name</th>
               <th>Phone Number</th>
               <th>Address</th>
@@ -113,7 +141,14 @@ const Dashboard = () => {
           <tbody>
             {filteredStudents.map((student, index) => (
               <tr key={index}>
-                <td>{student.name}</td>
+                <td>
+                  <input
+                    type="checkbox"
+                    checked={selectedStudents.includes(student.name)}
+                    onChange={() => handleSelectStudent(student.name)}
+                  />
+                </td>
+                <td onClick={() => handleViewStudentDetail(student.name)}>{student.name}</td>
                 <td>{student.phone}</td>
                 <td>{student.address}</td>
                 <td>{student.percentage}</td>
