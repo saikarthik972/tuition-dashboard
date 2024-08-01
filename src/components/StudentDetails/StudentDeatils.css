@@ -1,0 +1,59 @@
+.student-detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.student-profile {
+  flex: 1;
+  margin-right: 130px;
+  border: 1px solid gray;
+  padding: 10px;
+  box-shadow: 0px 1px 5px;
+}
+
+.student-image {
+  display: block;
+  border-radius: 100px;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  object-fit: cover;
+  box-shadow: 0 1px 10px 3px;
+}
+
+table {
+  box-shadow: 0px 4px 10px;
+  width: 100%;
+}
+
+.student-fee-table {
+  flex: 2;
+}
+
+
+.student-fee-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.student-fee-table th,
+.student-fee-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  align-items: center;
+}
+
+.student-fee-table th {
+  background-color: #f2f2f2;
+}
+
+.label-container {
+  display: flex;
+  align-items: center;
+}
+
+.label-container input {
+  margin-left: 10px;
+}
